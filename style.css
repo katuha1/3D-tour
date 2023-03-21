@@ -10,6 +10,7 @@
 body { 
     overflow: hidden;
     user-select: none;
+    font-size: 63.5%;
 }
 
 a {
@@ -27,7 +28,22 @@ a {
 }
 
 .header .logo {
-    font-size: 2rem;
+    font-size: 1.4rem;
+}
+
+#menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 3.6rem;
+}
+  
+#menu-icon span {
+    display: block;
+    width: 30px;
+    height: 5px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    border-radius: 5px;
 }
 
 .header .nav-bar a {
@@ -39,3 +55,12 @@ canvas {
     width: 100%;
     height: 100%;
 }
+
+@media (max-width: 1176px) {
+    #menu-icon {
+        display: block;
+    }
+    .nav-bar {
+        display: none;
+    }
+} 
