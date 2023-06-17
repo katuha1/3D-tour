@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa';
+    outline: none;
+    border: 0;
+}
+
+body {
+    overflow-x: hidden;
+    font-size: 63.5%;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    padding: 1rem 5%;
+}
+
+.header__logo {
+    font-size: 1.7rem;
+}
+
+.header .nav__bar a {
+    font-size: 1.4rem;
+}
+
+.header .nav__bar a.activePage::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    margin-top: 5px;
+}
+
+.burger-btn__header {
+    display: none;
+    align-items: center;
+    position: relative;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    background-color: transparent;
+    z-index: 100;
+}
+
+.burger-btn__header span,
+.burger-btn__header::before,
+.burger-btn__header::after {
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.burger-btn__header span {
+    top: 8px;
+}
+
+.burger-btn__header::before {
+    content: '';
+    top: 0px;
+}
+
+.burger-btn__header::after {
+    content: '';
+    top: 16px;
+}
+
+.burger-btn__header.open-menu span {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.burger-btn__header.open-menu::before {
+    transform: rotate(45deg);
+    top: 8px;
+    transition: 0.4s;
+}
+
+.burger-btn__header.open-menu::after {
+    transform: rotate(-45deg);
+    top: 8px;
+    transition: 0.4s;
+}
+
+.ModalWindow {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media only screen and (max-width: 968px) {
+    .burger-btn__header {
+        display: flex;
+    }
+
+    .header .ModalWindow {
+        display: none;
+    }
+}
+
+.ModalWindow.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 400px;
+    height: 80vh;
+    background-color: #333;
+    transition: all 1s ease;
+    border-radius: .3rem;
+}
+
+.home {
+    display: flex;
+    min-height: 100vh;
+}
+
+.panorama__container {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    cursor: grab;
+}

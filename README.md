@@ -1,9 +1,4 @@
-# 3D-tour
-
-<h2><b>Управление</b></h2>
-<pre>
-ArrowRight - Переключение на следующую панораму
-ArrowLeft - Предыдущая панорама
-Чтобы добавить другие панорамы, закинте их в `path`, а также нужно добавить их путь в массив `spheres`.
-Для перемещение камеры, зажмите кнопку мыши.
-</pre>
+# 3D-tour   
+https://cdnjs.com/libraries/three.js/105   
+https://github.com/pchen66/panolens.js   
+https://pchen66.github.io/Panolens/docs/PANOLENS.Viewer.html
